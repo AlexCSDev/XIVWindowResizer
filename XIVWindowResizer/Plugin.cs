@@ -7,7 +7,7 @@ using Dalamud.Game.Text;
 using Dalamud.Game.Gui;
 using System;
 
-namespace SamplePlugin
+namespace XIVWindowResizer
 {
     public sealed class Plugin : IDalamudPlugin
     {
