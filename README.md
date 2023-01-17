@@ -8,8 +8,11 @@ The window resizing code is a fully managed implementation of the code from the 
 **Make sure your game is in borderless or windowed mode, this won't work in full screen**
 
 The plugin comes with the following commands:
+
 `/wresize set <width> <height>` - Set window size.
+
 `/wresize reset` - Reset window size back to the original size.
+
 `/wresize update` - Update window size used by `/wresize reset` command. Use if you have changed game's screen resolution without restarting the game.
 
 There are 2 recommended usage patterns:
