@@ -16,9 +16,9 @@ namespace XIVWindowResizer
         private CommandManager _commandManager { get; init; }
         private ChatGui _chatGui { get; init; }
 
-        private Size _originalWindowSize;
+        private Size _originalWindowSize { get; set; }
 
-        private WindowSizeHelper _windowSizeHelper;
+        private WindowSizeHelper _windowSizeHelper { get; init; }
 
         public Plugin(
             [RequiredVersion("1.0")] CommandManager commandManager,
@@ -32,7 +32,7 @@ namespace XIVWindowResizer
 
             _commandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
             {
-                HelpMessage = "Set window size.\r\nUsage:\r\n/wresize set <width> <height> - Set window size.\r\n/wresize reset - Reset window size back to the original size.\r\n/wresize update - Update stored original window size. Use to update stored resolution when you have changed game's screen resolution without restarting the game."
+                HelpMessage = "Set window size.\r\nUsage:\r\n/wresize set <width> <height> - Set window size.\r\n/wresize reset - Reset window size back to the original size.\r\n/wresize update - Update window size used by /wresize reset command. Use if you have changed game's screen resolution without restarting the game or reloading the plugin."
             });
         }
 
@@ -75,12 +75,15 @@ namespace XIVWindowResizer
                     break;
                 case "reset":
                     _windowSizeHelper.SetWindowSize(_originalWindowSize.Width, _originalWindowSize.Height);
-                    PrintInChat($"Window size is set to {_originalWindowSize.Width}x{_originalWindowSize.Height}");
+                    PrintInChat($"Window size is reset to {_originalWindowSize.Width}x{_originalWindowSize.Height}");
                     break;
                 case "update":
                     _originalWindowSize = _windowSizeHelper.GetWindowSize();
                     PrintInChat($"Updated saved window size to {_originalWindowSize.Width}x{_originalWindowSize.Height}");
                     break;
+				default:
+                    PrintInChat($"Unknown command: {splitArgs[0]}");
+                    break;					
             }
         }
 

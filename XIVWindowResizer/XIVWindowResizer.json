@@ -1,11 +1,11 @@
 {
-  "Author": "AlexCSDev",
-  "Name": "XIVWindowResizer",
-  "Punchline": "Game window resizing plugin.",
-  "Description": "Game window resizing plugin mostly intended for users who want to take screenshots at resolutions higher than their display resolution without going fullscreen and using DSR and similar features.",
-  "InternalName": "xivWindowResizer",
-  "ApplicableVersion": "any",
-  "Tags": [
-    "utility"
-  ]
+    "Author": "AlexCSDev",
+    "Name": "XIVWindowResizer",
+    "Punchline": "Game window resizing plugin. Ever wanted to take 8K screenshots on 144p screen? Now you can.",
+    "Description": "Set your game window to arbitrary size not limited by your display resolution. Mostly useful for taking high-resolution screenshots without going fullscreen and using DSR/FSR.\r\nRequires borderless or windowed mode.",
+    "InternalName": "xivWindowResizer",
+    "ApplicableVersion": "any",
+    "Tags": [
+        "utility"
+    ]
 }
