@@ -6,6 +6,8 @@
     "InternalName": "xivWindowResizer",
     "ApplicableVersion": "any",
     "Tags": [
-        "utility"
+		"gpose",
+		"posing",
+		"utility"
     ]
 }
