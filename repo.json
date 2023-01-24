@@ -15,8 +15,8 @@
 			"utility"
 		],
 		"IconUrl": "https://raw.githubusercontent.com/AlexCSDev/XIVWindowResizer/master/XIVWindowResizer/images/icon.png",
-		"DownloadLinkInstall": "https://github.com/AlexCSDev/XIVWindowResizer/releases/download/v1.0.0.0/latest.zip",
-		"DownloadLinkTesting": "https://github.com/AlexCSDev/XIVWindowResizer/releases/download/v1.0.0.0/latest.zip",
-		"DownloadLinkUpdate": "https://github.com/AlexCSDev/XIVWindowResizer/releases/download/v1.0.0.0/latest.zip"
+		"DownloadLinkInstall": "https://github.com/AlexCSDev/XIVWindowResizer/releases/download/1.0.0.0/latest.zip",
+		"DownloadLinkTesting": "https://github.com/AlexCSDev/XIVWindowResizer/releases/download/1.0.0.0/latest.zip",
+		"DownloadLinkUpdate": "https://github.com/AlexCSDev/XIVWindowResizer/releases/download/1.0.0.0/latest.zip"
 	}
 ]
