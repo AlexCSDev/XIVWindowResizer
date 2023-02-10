@@ -6,6 +6,8 @@ using System.Drawing;
 using Dalamud.Game.Text;
 using Dalamud.Game.Gui;
 using System;
+using Dalamud.Game.ClientState.Keys;
+using Dalamud.Game;
 
 namespace XIVWindowResizer
 {
@@ -15,6 +17,8 @@ namespace XIVWindowResizer
         private const string CommandName = "/wresize";
         private CommandManager _commandManager { get; init; }
         private ChatGui _chatGui { get; init; }
+        private KeyState _keyState { get; init; }
+        private Framework _framework { get; init; }
 
         private Size _originalWindowSize { get; set; }
 
@@ -22,10 +26,14 @@ namespace XIVWindowResizer
 
         public Plugin(
             [RequiredVersion("1.0")] CommandManager commandManager,
-            [RequiredVersion("1.0")] ChatGui chatGui)
+            [RequiredVersion("1.0")] ChatGui chatGui,
+            [RequiredVersion("1.0")] KeyState keyState,
+            [RequiredVersion("1.0")] Framework framework)
         {
             _commandManager = commandManager;
             _chatGui = chatGui;
+            _keyState = keyState;
+            _framework = framework;
 
             _windowSizeHelper = new WindowSizeHelper(new WindowSearchHelper());
             _originalWindowSize = _windowSizeHelper.GetWindowSize();
@@ -34,11 +42,27 @@ namespace XIVWindowResizer
             {
                 HelpMessage = "Set window size.\r\nUsage:\r\n/wresize set <width> <height> - Set window size.\r\n/wresize reset - Reset window size back to the original size.\r\n/wresize update - Update window size used by /wresize reset command. Use if you have changed game's screen resolution without restarting the game or reloading the plugin."
             });
+
+            _framework.Update += FrameworkUpdate;
+        }
+
+        private void FrameworkUpdate(Framework framework)
+        {
+            if (_keyState[VirtualKey.F9] && _keyState[VirtualKey.SHIFT])
+            {
+                //TODO: Load this and the desired hotkey from a configuration that can be set with a slash command or something?
+                _windowSizeHelper.SetWindowSize(5160, 2160); 
+            }
+            else if (_keyState[VirtualKey.F10] && _keyState[VirtualKey.SHIFT])
+            {
+                _windowSizeHelper.SetWindowSize(_originalWindowSize.Width, _originalWindowSize.Height);
+            }
         }
 
         public void Dispose()
         {
             _commandManager.RemoveHandler(CommandName);
+            _framework.Update -= FrameworkUpdate;
         }
 
         private void OnCommand(string command, string args)
