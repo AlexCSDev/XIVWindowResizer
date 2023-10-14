@@ -6,6 +6,7 @@ using System.Drawing;
 using Dalamud.Game.Text;
 using Dalamud.Game.Gui;
 using System;
+using Dalamud.Plugin.Services;
 
 namespace XIVWindowResizer
 {
@@ -13,20 +14,18 @@ namespace XIVWindowResizer
     {
         public string Name => "XIVWindowResizer";
         private const string CommandName = "/wresize";
-        private CommandManager _commandManager { get; init; }
-        private ChatGui _chatGui { get; init; }
+
+        [PluginService]
+        private ICommandManager _commandManager { get; init; }
+        [PluginService]
+        private IChatGui _chatGui { get; init; }
 
         private Size _originalWindowSize { get; set; }
 
         private WindowSizeHelper _windowSizeHelper { get; init; }
 
-        public Plugin(
-            [RequiredVersion("1.0")] CommandManager commandManager,
-            [RequiredVersion("1.0")] ChatGui chatGui)
+        public Plugin()
         {
-            _commandManager = commandManager;
-            _chatGui = chatGui;
-
             _windowSizeHelper = new WindowSizeHelper(new WindowSearchHelper());
             _originalWindowSize = _windowSizeHelper.GetWindowSize();
 
@@ -94,7 +93,7 @@ namespace XIVWindowResizer
                 Message = message
             };
 
-            _chatGui.PrintChat(xivChat);
+            _chatGui.Print(xivChat);
         }
     }
 }
