@@ -1,11 +1,11 @@
 [
 	{
 		"Author": "AlexCSDev",
-		"Name": "XIVWindowResizer",
-		"InternalName": "xivWindowResizer",
+		"Name": "XIVWindowResizerMiraiEdit",
+		"InternalName": "miraixivWindowResizer",
 		"Description": "Game window resizing plugin. Ever wanted to take 8K screenshots on 144p screen? Now you can. Temp update URL by me! :D",
-		"AssemblyVersion": "1.0.0.0",
-		"TestingAssemblyVersion": "1.0.0.0",
+		"AssemblyVersion": "1.0.1.0",
+		"TestingAssemblyVersion": "1.0.1.0",
 		"RepoUrl": "https://github.com/AlexCSDev/XIVWindowResizer",
 		"ApplicableVersion": "any",
 		"DalamudApiLevel": 9,
