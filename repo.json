@@ -3,7 +3,7 @@
 		"Author": "AlexCSDev",
 		"Name": "XIVWindowResizer",
 		"InternalName": "xivWindowResizer",
-		"Description": "Game window resizing plugin. Ever wanted to take 8K screenshots on 144p screen? Now you can.",
+		"Description": "Game window resizing plugin. Ever wanted to take 8K screenshots on 144p screen? Now you can. Temp update URL by me! :D",
 		"AssemblyVersion": "1.0.0.0",
 		"TestingAssemblyVersion": "1.0.0.0",
 		"RepoUrl": "https://github.com/AlexCSDev/XIVWindowResizer",
@@ -15,8 +15,8 @@
 			"utility"
 		],
 		"IconUrl": "https://raw.githubusercontent.com/AlexCSDev/XIVWindowResizer/master/XIVWindowResizer/images/icon.png",
-		"DownloadLinkInstall": "https://github.com/AlexCSDev/XIVWindowResizer/releases/download/1.0.0.0/latest.zip",
-		"DownloadLinkTesting": "https://github.com/AlexCSDev/XIVWindowResizer/releases/download/1.0.0.0/latest.zip",
-		"DownloadLinkUpdate": "https://github.com/AlexCSDev/XIVWindowResizer/releases/download/1.0.0.0/latest.zip"
+		"DownloadLinkInstall": "https://github.com/AjisaiMirai/XIVWindowResizer/releases/download/release/XIVWindowResizer.zip",
+		"DownloadLinkTesting": "https://github.com/AjisaiMirai/XIVWindowResizer/releases/download/release/XIVWindowResizer.zip",
+		"DownloadLinkUpdate": "https://github.com/AjisaiMirai/XIVWindowResizer/releases/download/release/XIVWindowResizer.zip"
 	}
 ]
