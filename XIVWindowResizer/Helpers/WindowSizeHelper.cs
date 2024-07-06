@@ -1,4 +1,6 @@
+using Dalamud.IoC;
 using Dalamud.Logging;
+using Dalamud.Plugin.Services;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Kernel;
 using System;
 using System.Collections.Generic;
@@ -13,6 +15,7 @@ namespace XIVWindowResizer.Helpers
     //Fully managed implementation of the window resizing logic from https://github.com/ProjectMimer/xivr
     public unsafe class WindowSizeHelper
     {
+        [PluginService] internal static IPluginLog PluginLog { get; private set; } = null!;
         [DllImport("user32.dll")]
         static extern bool AdjustWindowRect(ref RECT lpRect, uint dwStyle, bool bMenu);
 
@@ -42,7 +45,7 @@ namespace XIVWindowResizer.Helpers
                 if (_gameWindowHandle == IntPtr.Zero)
                     throw new Exception("Unable to find window handle");
 
-                PluginLog.Log($"Found window handle: {_gameWindowHandle:X}");
+                PluginLog.Debug($"Found window handle: {_gameWindowHandle:X}");
             }
 
             //Tell the game to update resolution
