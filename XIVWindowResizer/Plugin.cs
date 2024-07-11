@@ -17,6 +17,7 @@ namespace XIVWindowResizer
 
         [PluginService]
         private ICommandManager _commandManager { get; init; }
+
         [PluginService]
         private IChatGui _chatGui { get; init; }
 
