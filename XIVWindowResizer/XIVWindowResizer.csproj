@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Authors>AlexCSDev</Authors>
     <Company></Company>
-    <Version>1.0.0.3</Version>
+    <Version>1.0.0.4</Version>
     <Description>Game window resizing plugin mostly intended for users who want to take screenshots at resolutions higher than their display resolution without going fullscreen and using DSR and similar features.</Description>
     <Copyright></Copyright>
     <PackageProjectUrl>https://github.com/AlexCSDev/XIVWindowResizer</PackageProjectUrl>
