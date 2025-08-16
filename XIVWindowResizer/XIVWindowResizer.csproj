@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<Project Sdk="Dalamud.NET.Sdk/12.0.2">
+<Project Sdk="Dalamud.NET.Sdk/13.0.0">
     <PropertyGroup>
         <Authors>AlexCSDev</Authors>
         <Company></Company>
-        <Version>1.0.0.5</Version>
+        <Version>1.0.0.6</Version>
         <Description>Game window resizing plugin mostly intended for users who want to take screenshots at resolutions higher than their display resolution without going fullscreen and using DSR and similar features.</Description>
         <Copyright></Copyright>
         <PackageProjectUrl>https://github.com/AlexCSDev/XIVWindowResizer</PackageProjectUrl>
