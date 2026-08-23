@@ -10,8 +10,8 @@ namespace XIVWindowResizer.UI;
 
 public class GPoseResizerWindow : Window
 {
-    private static readonly float[] Scales = { 1.00f, 1.25f, 1.50f, 1.75f, 2.00f };
-    private static readonly string[] ScaleLabels = { "1.00x", "1.25x", "1.50x", "1.75x", "2.00x" };
+    private static readonly float[] Scales = { 1.00f, 1.25f, 1.50f, 1.75f, 2.00f, 2.25f, 2.50f, 2.75f, 3.00f, 3.25f, 3.50f, 3.75f, 4.00f };
+    private static readonly string[] ScaleLabels = Array.ConvertAll(Scales, s => $"{s:0.00}x");
     private readonly WindowSizeHelper _windowSizeHelper;
     private readonly Func<Size> _getOriginalSize;
     private readonly Configuration _config;
